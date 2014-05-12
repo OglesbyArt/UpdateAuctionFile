@@ -1,6 +1,5 @@
 UpdateAuctionRecord
 ===================
-
 import java.util.Date;
 
 public class UpdateAuctionFile
@@ -198,12 +197,7 @@ public class UpdateAuctionFile
     //Post: The Artist file is deleted
     public static void deleteAuctionFile()
     {
-        
-	System.out.println ("Enter Last Name of Artist and title of painting "
-                + "for the file you want to delete you want to delete: ");
-	String lname = UserInterface.getString();
-        String title = UserInterface.getString();
-	//not sure how to do this yet
+        AuctionPainting a = new AuctionPainting();
+        a.delete();
     }
 }
-
