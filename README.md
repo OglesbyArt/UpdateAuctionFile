@@ -190,14 +190,4 @@ public class UpdateAuctionFile
     }
 
   }
-
-	//Desc: deletes the artist file selected by searching for lastname, 
-    //      firstname
-    //Pre: the ArtistFile.txt file must exist
-    //Post: The Artist file is deleted
-    public static void deleteAuctionFile()
-    {
-        AuctionPainting a = new AuctionPainting();
-        a.delete();
-    }
 }
