@@ -1,5 +1,4 @@
-UpdateAuctionRecord
-===================
+
 import java.util.Date;
 
 public class UpdateAuctionFile
@@ -36,6 +35,19 @@ public class UpdateAuctionFile
                         String temp = UserInterface.getString();
                         Date date = new Date(temp);
                         m.setDateofWork(date);
+                        m.setClassification("Masterpiece");
+                        System.out.println ("\t        Enter Painting height: ");
+                        double height = UserInterface.getDouble();
+                        m.setHeight(height);
+                        System.out.println ("\t        Enter Painting width: ");
+                        double width = UserInterface.getDouble();
+                        m.setWidth(width);
+                        System.out.println ("\t        Enter Painting Medium (oil, watercolor, or other): ");
+                        String medium = UserInterface.getString();
+                        m.setMedium(title);
+                        System.out.println ("\t        Enter Painting Subject (portrait, still-life, landscape, or other): ");
+                        String subject = UserInterface.getString();
+                        m.setSubject(subject);
                         System.out.println ("\t        Enter Date of Auction: ");
                         String t = UserInterface.getString();
                         Date datea = new Date(temp);
@@ -53,6 +65,7 @@ public class UpdateAuctionFile
 		
 
 	m.save ();
+        UserInterface.pressEnter();
     }
     catch (Exception e)
     {
@@ -135,27 +148,34 @@ public class UpdateAuctionFile
 			{
                             case '1':
                                 a.updateArtistsFirstName();
+                                a.save ();
                                 break;
 
                             case '2':
                                 a.updateArtistsLastName();
+                                a.save ();
                                 break;
                             
                             case '3':
                               a.updateTitleOfWork();
+                              a.save ();
                               break;
 
                             case '4':
                                 a.updateDateOfWork();
+                                a.save ();
                                 break;
                             case '5':
                                 a.updateMedium();
+                                a.save ();
                                 break;
                             case '6':
                                 a.updateDateofAuction();
+                                a.save ();
                                 break;
                             case '7':
                                 a.updateAuctionSalesPrice();
+                                a.save ();
                                 break;
                             case '\n':
                               done = true;
@@ -191,3 +211,4 @@ public class UpdateAuctionFile
 
   }
 }
+
