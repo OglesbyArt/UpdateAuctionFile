@@ -1,4 +1,3 @@
-
 import java.util.Date;
 
 public class UpdateAuctionFile
@@ -106,7 +105,7 @@ public class UpdateAuctionFile
 	    if (!found)
 	    {
 		System.out.println ("Painting by " + lName +" Titled "+ title + " was not found.");
-		System.out.println ("Would you like to enter another Artist Name and Title?");
+		System.out.println ("Would you like to enter another Artist Name and Title? y/n");
 
 		choice = UserInterface.getChar();
 
@@ -211,4 +210,3 @@ public class UpdateAuctionFile
 
   }
 }
-
