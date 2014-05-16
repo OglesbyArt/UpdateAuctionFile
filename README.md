@@ -1,3 +1,4 @@
+
 import java.util.Date;
 
 public class UpdateAuctionFile
@@ -58,12 +59,13 @@ public class UpdateAuctionFile
 			if (!done)
 			{
 		            m.print ();
-		            UserInterface.pressEnter();
+                            done = true;
 			}
 		    }
 		
 
 	m.save ();
+        System.out.println("Press <ENTER> to return to menu");
         UserInterface.pressEnter();
     }
     catch (Exception e)
@@ -176,7 +178,7 @@ public class UpdateAuctionFile
                                 a.updateAuctionSalesPrice();
                                 a.save ();
                                 break;
-                            case '\n':
+                            case '8':
                               done = true;
 				  break;
 
@@ -210,3 +212,4 @@ public class UpdateAuctionFile
 
   }
 }
+
